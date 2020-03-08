@@ -11,3 +11,42 @@ We're learning ggplot2. It's going to be amazing.
 
 I have already created an SSH key at my home desktop and "registered" it on Github.
 I hope it works! 
+
+```{r prelims, echo = TRUE, results = "hide", message = FALSE}
+library(tidyverse)
+
+#National Parks in California
+ca <- read_csv("https://raw.githubusercontent.com/OHI-Science/data-science-training/master/data/ca.csv") 
+
+#Acadia National Park
+acadia <- read_csv("https://raw.githubusercontent.com/OHI-Science/data-science-training/master/data/acadia.csv")
+
+#Southeast US National Parks
+se <- read_csv("https://raw.githubusercontent.com/OHI-Science/data-science-training/master/data/se.csv")
+
+#2016 Visitation for all Pacific West National Parks
+visit_16 <- read_csv("https://raw.githubusercontent.com/OHI-Science/data-science-training/master/data/visit_16.csv")
+
+#All Nationally designated sites in Massachusetts
+mass <- read_csv("https://raw.githubusercontent.com/OHI-Science/data-science-training/master/data/mass.csv")
+
+```
+
+Let us check the ca data:
+
+```{r}
+ca
+```
+
+Let us plot the visitation in each year colored by park:
+
+```{r plotting}
+ggplot(data = ca) +
+    geom_point(aes(x = year, y = visitors, color = park_name)) +
+    labs(x = "Year",
+       y = "Visitation",
+       title = "California National Park Visitation") +
+    theme_bw() +
+    theme(legend.title=element_blank())
+```
+
