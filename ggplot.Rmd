@@ -10,4 +10,4 @@ output: html_document
 We're learning ggplot2. It's going to be amazing.
 
 I have already created an SSH key at my home desktop and "registered" it on Github.
-I hope it works! Some other trial... and another one...
+I hope it works! 
