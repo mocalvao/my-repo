@@ -7,7 +7,7 @@ output: html_document
 
 # Learning ggplot2
 
-We're learning ggplot2. It's going to be amazing.
+We're learning ggplot2. It's going to be amazing. 
 
 I have already created an SSH key at my home desktop and "registered" it on Github.
 I hope it works! Now with HTTPS credentials
